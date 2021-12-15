@@ -12,6 +12,7 @@ CREATE TABLE Role (
     CONSTRAINT PK_Role PRIMARY KEY (idRole)
 );
 
+# Permission Table
 DROP Table IF EXISTS Permission;
 CREATE TABLE Permission (
     idPermission int AUTO_INCREMENT,
@@ -21,8 +22,7 @@ CREATE TABLE Permission (
     CONSTRAINT PK_Permission PRIMARY KEY (idPermission)
 );
 
-
-
+# RolePermission Table
 DROP Table IF EXISTS RolePermission;
 CREATE TABLE RolePermission (
     idRolePermission int AUTO_INCREMENT,
@@ -45,14 +45,14 @@ CREATE TABLE SSICA (
     CONSTRAINT PK_Ssica PRIMARY KEY (idSsica)
 );
 
-# Spesialiter Table
-DROP TABLE IF EXISTS Specialiter;
-CREATE TABLE Specialiter (
-    idSpecialiter int NOT NULL AUTO_INCREMENT,
+# Speciality Table
+DROP TABLE IF EXISTS Speciality;
+CREATE TABLE Speciality (
+    idSpeciality int NOT NULL AUTO_INCREMENT,
     name varchar(50),
     description varchar(255),
 
-    CONSTRAINT PK_Specialiter PRIMARY KEY (idSpecialiter)
+    CONSTRAINT PK_Speciality PRIMARY KEY (idSpeciality)
 );
 
 
@@ -125,15 +125,15 @@ CREATE TABLE  Manager (
     CONSTRAINT FK_ManagerUser FOREIGN KEY (idManager) REFERENCES User(idUser)
 );
 
-#  Manager table
+#  Trainer table
 DROP TABLE IF EXISTS Trainer;
 CREATE TABLE Trainer (
 	idTrainer int NOT NULL,
-	idSpecialiter int,
+	idSpeciality int,
 
     CONSTRAINT PK_Trainer PRIMARY KEY (idTrainer),
     CONSTRAINT FK_TrainerUser FOREIGN KEY (idTrainer) REFERENCES User(idUser),
-    CONSTRAINT FK_TrainerSpecialiter FOREIGN KEY (idSpecialiter) REFERENCES Specialiter(idSpecialiter)
+    CONSTRAINT FK_TrainerSpeciality FOREIGN KEY (idSpeciality) REFERENCES Speciality(idSpeciality)
 );
 
 # Class table
@@ -186,12 +186,12 @@ CREATE TABLE Secretary (
 DROP TABLE IF EXISTS Student;
 CREATE TABLE Student (
 	idStudent int NOT NULL,
-	idSpecialiter int,
+	idSpeciality int,
 	idClass int,
 
     CONSTRAINT PK_Student PRIMARY KEY (idStudent),
     CONSTRAINT FK_StudentUser FOREIGN KEY (idStudent) REFERENCES User(idUser),
-    CONSTRAINT FK_StudentSpecialiter FOREIGN KEY (idSpecialiter) REFERENCES Specialiter(idSpecialiter),
+    CONSTRAINT FK_StudentSpeciality FOREIGN KEY (idSpeciality) REFERENCES Speciality(idSpeciality),
     CONSTRAINT FK_StudentClass FOREIGN KEY (idClass) REFERENCES Class(idClass)
 );
 

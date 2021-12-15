@@ -2,7 +2,6 @@ CREATE DATABASE IF NOT EXISTS FORACADEMY;
 SET foreign_key_checks = 0;
 
 # Role Table
-# Role Table
 DROP Table IF EXISTS Role;
 CREATE TABLE Role (
     idRole int AUTO_INCREMENT,

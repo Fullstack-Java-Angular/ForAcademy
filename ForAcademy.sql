@@ -1,7 +1,7 @@
 CREATE DATABASE IF NOT EXISTS FORACADEMY;
 SET foreign_key_checks = 0;
 
-# Role Table
+-- Role Table
 DROP Table IF EXISTS Role;
 CREATE TABLE Role (
     idRole int AUTO_INCREMENT,
@@ -12,7 +12,7 @@ CREATE TABLE Role (
     CONSTRAINT PK_Role PRIMARY KEY (idRole)
 );
 
-# Permission Table
+-- Permission Table
 DROP Table IF EXISTS Permission;
 CREATE TABLE Permission (
     idPermission int AUTO_INCREMENT,
@@ -22,7 +22,7 @@ CREATE TABLE Permission (
     CONSTRAINT PK_Permission PRIMARY KEY (idPermission)
 );
 
-# RolePermission Table
+-- RolePermission Table
 DROP Table IF EXISTS RolePermission;
 CREATE TABLE RolePermission (
     idRolePermission int AUTO_INCREMENT,
@@ -36,7 +36,7 @@ CREATE TABLE RolePermission (
     CONSTRAINT FK_RolePermissionPermission FOREIGN KEY (idPermission) REFERENCES Permission(idPermission)
 );
 
-# SSICA table
+-- SSICA table
 DROP Table IF EXISTS SSICA;
 CREATE TABLE SSICA (
     idSsica int NOT NULL AUTO_INCREMENT,
@@ -45,7 +45,7 @@ CREATE TABLE SSICA (
     CONSTRAINT PK_Ssica PRIMARY KEY (idSsica)
 );
 
-# Speciality Table
+-- Speciality Table
 DROP TABLE IF EXISTS Speciality;
 CREATE TABLE Speciality (
     idSpeciality int NOT NULL AUTO_INCREMENT,
@@ -56,7 +56,7 @@ CREATE TABLE Speciality (
 );
 
 
-# Scan table (UserSsica)
+-- Scan table (UserSsica)
 DROP Table IF EXISTS Scan;
 CREATE TABLE Scan (
     idScan int NOT NULL Auto_Increment,
@@ -71,10 +71,11 @@ CREATE TABLE Scan (
 );
 
 
-# Address table
+-- Address table
 DROP TABLE IF EXISTS Address;
 CREATE TABLE Address (
     idAddress int NOT NULL AUTO_INCREMENT,
+    line varchar(50),
     country varchar(50),
     region varchar(50),
     city varchar(50),
@@ -83,7 +84,7 @@ CREATE TABLE Address (
     CONSTRAINT PK_Address PRIMARY KEY (idAddress)
 );
 
-# Factory Table
+-- Factory Table
 DROP TABLE IF EXISTS Factory;
 CREATE TABLE Factory (
     idFactory int NOT NULL AUTO_INCREMENT,
@@ -94,7 +95,7 @@ CREATE TABLE Factory (
     CONSTRAINT FK_FactoryAddress FOREIGN KEY (idAddress) REFERENCES Address(idAddress)
 );
 
-#  User table
+--  User table
 DROP TABLE IF EXISTS User;
 CREATE TABLE  User (
 	idUser int NOT NULL AUTO_INCREMENT,
@@ -115,7 +116,7 @@ CREATE TABLE  User (
 
 );
 
-#  Manager table
+--  Manager table
 DROP TABLE IF EXISTS Manager;
 CREATE TABLE  Manager (
 	idManager int NOT NULL,
@@ -125,7 +126,7 @@ CREATE TABLE  Manager (
     CONSTRAINT FK_ManagerUser FOREIGN KEY (idManager) REFERENCES User(idUser)
 );
 
-#  Trainer table
+--  Trainer table
 DROP TABLE IF EXISTS Trainer;
 CREATE TABLE Trainer (
 	idTrainer int NOT NULL,
@@ -136,7 +137,7 @@ CREATE TABLE Trainer (
     CONSTRAINT FK_TrainerSpeciality FOREIGN KEY (idSpeciality) REFERENCES Speciality(idSpeciality)
 );
 
-# Class table
+-- Class table
 DROP TABLE IF EXISTS Class;
 CREATE TABLE Class (
     idClass int NOT NULL AUTO_INCREMENT,
@@ -151,7 +152,7 @@ CREATE TABLE Class (
     CONSTRAINT FK_ClassPromotion FOREIGN KEY (idPromotion) REFERENCES Promotion(idPromotion)
 );
 
-# Promotion table
+-- Promotion table
 DROP TABLE IF EXISTS Promotion;
 CREATE TABLE Promotion (
     idPromotion int NOT NULL AUTO_INCREMENT,
@@ -163,7 +164,7 @@ CREATE TABLE Promotion (
     CONSTRAINT PK_Class PRIMARY KEY (idPromotion)
 );
 
-#  Admin table
+--  Admin table
 DROP TABLE IF EXISTS Admin;
 CREATE TABLE Admin (
 	idAdmin int NOT NULL,
@@ -172,7 +173,7 @@ CREATE TABLE Admin (
     CONSTRAINT FK_AdminUser FOREIGN KEY (idAdmin) REFERENCES User(idUser)
 );
 
-#  Admin table
+--  Admin table
 DROP TABLE IF EXISTS Secretary;
 CREATE TABLE Secretary (
 	idSecretary int NOT NULL,
@@ -182,7 +183,7 @@ CREATE TABLE Secretary (
     CONSTRAINT FK_SecretaryUser FOREIGN KEY (idSecretary) REFERENCES User(idUser)
 );
 
-#  Student table
+--  Student table
 DROP TABLE IF EXISTS Student;
 CREATE TABLE Student (
 	idStudent int NOT NULL,

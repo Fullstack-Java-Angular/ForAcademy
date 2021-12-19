@@ -1,6 +1,6 @@
 package com.foracademy.dao.Class;
 
-import com.foracademy.models.Address;
+import com.foracademy.models.Class;
 
 import java.util.List;
 
@@ -20,22 +20,22 @@ public class ClassDaoImplementation implements ClassDao {
     }
 
     @Override
-    public List<Address> findAll() {
+    public List<Class> findAll() {
         return null;
     }
 
     @Override
-    public Address findById(int id) {
+    public Class findById(int id) {
         return null;
     }
 
     @Override
-    public int insert(Address address) {
+    public int insert(Class aClass) {
         return 0;
     }
 
     @Override
-    public int update(Address address) {
+    public int update(Class aClass) {
         return 0;
     }
 }

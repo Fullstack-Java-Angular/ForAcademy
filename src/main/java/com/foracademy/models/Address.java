@@ -1,13 +1,13 @@
 package com.foracademy.models;
 
 public class Address {
-    private int id;
+    private long id;
     private String country;
     private String region;
     private String city;
     private String postalCode;
 
-    public Address(int id, String country, String region, String city, String postalCode) {
+    public Address(long id, String country, String region, String city, String postalCode) {
         this.id = id;
         this.country = country;
         this.region = region;
@@ -15,11 +15,11 @@ public class Address {
         this.postalCode = postalCode;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 

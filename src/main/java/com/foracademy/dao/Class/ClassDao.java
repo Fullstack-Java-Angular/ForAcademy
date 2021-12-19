@@ -1,13 +1,6 @@
 package com.foracademy.dao.Class;
 
-import com.foracademy.models.Address;
+import com.foracademy.dao.Dao;
+import com.foracademy.models.Class;
 
-import java.util.List;
-
-public interface ClassDao {
-    public int delete(int id);
-    public List<Address> findAll();
-    public Address findById(int id);
-    public int insert(Address address);
-    public int update(Address address);
-}
+public interface ClassDao extends Dao<Class> { }

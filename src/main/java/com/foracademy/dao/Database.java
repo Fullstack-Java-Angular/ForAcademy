@@ -9,7 +9,7 @@ public class Database {
     private static final String DATABASE_NAME = "FORACADEMY";
     private static final String DATABASE_URL = String.format("jdbc:mysql://localhost:3306/%s", DATABASE_NAME);
     private static final String USERNAME = "root";
-    private static final String PASSWORD = "root";
+    private static final String PASSWORD = "";
     private static final String MAX_POOL = "250";
 
     private Connection connection;

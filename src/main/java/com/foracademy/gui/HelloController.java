@@ -1,4 +1,4 @@
-package com.foracademy.foracademy;
+package com.foracademy.gui;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

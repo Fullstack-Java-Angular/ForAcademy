@@ -24,4 +24,12 @@ public class Ssica {
     public void setBrand(String brand) {
         this.brand = brand;
     }
+
+    @Override
+    public String toString() {
+        return "Ssica{" +
+                "id=" + id +
+                ", brand='" + brand + '\'' +
+                '}';
+    }
 }

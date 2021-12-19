@@ -56,4 +56,15 @@ public class RolePermission {
     public void setUpdatedAt(Date updatedAt) {
         this.updatedAt = updatedAt;
     }
+
+    @Override
+    public String toString() {
+        return "RolePermission{" +
+                "id=" + id +
+                ", role=" + role +
+                ", permission=" + permission +
+                ", assignedAt=" + assignedAt +
+                ", updatedAt=" + updatedAt +
+                '}';
+    }
 }

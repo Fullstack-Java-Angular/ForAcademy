@@ -66,4 +66,16 @@ public class Class {
     public void setEndDay(Time endDay) {
         this.endDay = endDay;
     }
+
+    @Override
+    public String toString() {
+        return "Class{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", trainer=" + trainer +
+                ", promotion=" + promotion +
+                ", startDay=" + startDay +
+                ", endDay=" + endDay +
+                '}';
+    }
 }

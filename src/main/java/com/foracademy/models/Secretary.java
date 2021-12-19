@@ -17,4 +17,11 @@ public class Secretary extends User {
     public void setDateOfEntryToFactory(Date dateOfEntryToFactory) {
         this.dateOfEntryToFactory = dateOfEntryToFactory;
     }
+
+    @Override
+    public String toString() {
+        return "Secretary{" +
+                "dateOfEntryToFactory=" + dateOfEntryToFactory +
+                '}';
+    }
 }

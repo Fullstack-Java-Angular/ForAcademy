@@ -27,4 +27,12 @@ public class Student extends User {
     public void setaClass(Class aClass) {
         this.aClass = aClass;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "speciality=" + speciality +
+                ", aClass=" + aClass +
+                '}';
+    }
 }

@@ -17,4 +17,11 @@ public class Manager extends User {
     public void setDateOfEntryToFactory(Date dateOfEntryToFactory) {
         this.dateOfEntryToFactory = dateOfEntryToFactory;
     }
+
+    @Override
+    public String toString() {
+        return "Manager{" +
+                "dateOfEntryToFactory=" + dateOfEntryToFactory +
+                '}';
+    }
 }

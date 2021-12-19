@@ -56,4 +56,15 @@ public class Scan {
     public void setGoDate(Date goDate) {
         this.goDate = goDate;
     }
+
+    @Override
+    public String toString() {
+        return "Scan{" +
+                "scan=" + scan +
+                ", ssica=" + ssica +
+                ", user=" + user +
+                ", arrivalDate=" + arrivalDate +
+                ", goDate=" + goDate +
+                '}';
+    }
 }

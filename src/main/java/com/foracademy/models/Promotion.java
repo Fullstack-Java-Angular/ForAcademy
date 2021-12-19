@@ -56,4 +56,15 @@ public class Promotion {
     public void setEndDate(Time endDate) {
         this.endDate = endDate;
     }
+
+    @Override
+    public String toString() {
+        return "Promotion{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", year=" + year +
+                ", startDate=" + startDate +
+                ", endDate=" + endDate +
+                '}';
+    }
 }

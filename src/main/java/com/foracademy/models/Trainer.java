@@ -17,4 +17,11 @@ public class Trainer extends User {
     public void setSpeciality(Speciality speciality) {
         this.speciality = speciality;
     }
+
+    @Override
+    public String toString() {
+        return "Trainer{" +
+                "speciality=" + speciality +
+                '}';
+    }
 }

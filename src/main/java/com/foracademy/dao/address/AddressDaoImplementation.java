@@ -1,7 +1,9 @@
 package com.foracademy.dao.address;
 
+import com.foracademy.dao.DaoFactory;
 import com.foracademy.models.Address;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public class AddressDaoImplementation implements AddressDao {
@@ -12,10 +14,18 @@ public class AddressDaoImplementation implements AddressDao {
     private static final String UPDATE_ADDRESS = "";
 
     /*
+     * Constructor
+     */
+    private DaoFactory daoFactory;
+    public AddressDaoImplementation(DaoFactory daoFactory) {
+        this.daoFactory = daoFactory;
+    }
+
+    /*
      * Code part
      */
     @Override
-    public int delete(int id) {
+    public int delete(int id) throws SQLException {
         return 0;
     }
 

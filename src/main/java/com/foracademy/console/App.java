@@ -4,12 +4,17 @@ import com.foracademy.dao.speciality.SpecialityDao;
 import com.foracademy.dao.speciality.SpecialiyDaoImplementation;
 import com.foracademy.models.Speciality;
 
+import com.foracademy.dao.DaoFactory;
+import com.foracademy.dao.address.AddressDao;
+
 import java.io.IOException;
 import java.io.InputStream;
+import java.sql.SQLException;
 import java.util.Properties;
 
 public class App {
 
+<<<<<<< HEAD
     public static void main(String[] args) {
        // System.out.println("HELLO FROM CONSOLE APP");
     SpecialityDao spc = new SpecialiyDaoImplementation();
@@ -26,6 +31,16 @@ public class App {
 
         /* ******************************** for delete *********************************** */
         //spc.delete(1);
+=======
+    public static void main(String[] args) throws IOException {
+        System.out.println("HELLO FROM CONSOLE APP");
+        AddressDao addressDao = DaoFactory.getInstance().getAddressDao();
+        try {
+            addressDao.delete(23);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+>>>>>>> e377ae69ecf372615d984909da459d64af5d8ea6
     }
 
 }

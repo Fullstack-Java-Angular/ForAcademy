@@ -18,10 +18,13 @@ public class Database {
     public Connection connect() {
         try {
             this.connection = (Connection) DriverManager.getConnection(DATABASE_URL, USERNAME, PASSWORD);
+            System.out.println("you are connect ");
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
         return connection;
+
     }
 
     public void disconnect() throws SQLException {

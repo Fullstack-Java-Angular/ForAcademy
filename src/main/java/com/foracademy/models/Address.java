@@ -7,6 +7,8 @@ public class Address {
     private String city;
     private String postalCode;
 
+    public Address() {}
+
     public Address(long id, String country, String region, String city, String postalCode) {
         this.id = id;
         this.country = country;

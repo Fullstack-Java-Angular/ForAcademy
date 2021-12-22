@@ -1,10 +1,11 @@
 package com.foracademy.models;
 
 public class Speciality {
-    private int id;
+    private long id;
     private String name;
     private String description;
 
+<<<<<<< HEAD
     public Speciality(){
 
     }
@@ -14,12 +15,15 @@ public class Speciality {
         this.name = name;
         this.description = description;
     }
+=======
+    public Speciality() { }
+>>>>>>> 0f8f383461608f56903ce6a233297d7378ae14e5
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -37,14 +41,5 @@ public class Speciality {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    @Override
-    public String toString() {
-        return "Speciality{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                '}';
     }
 }

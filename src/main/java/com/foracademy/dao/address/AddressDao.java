@@ -34,7 +34,7 @@ public class AddressDao implements IAddressDao {
      */
     @Override
     public int delete(int id) throws SQLException {
-        Object[] objects = {id};
+        Object[] objects = { id };
         Connection connection = DaoFactory.getInstance().getConnection();
         return DaoUtilities.cud(connection, DELETE_ADDRESS, objects);
     }

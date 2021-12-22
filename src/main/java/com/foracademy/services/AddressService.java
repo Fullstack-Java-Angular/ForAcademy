@@ -1,9 +1,11 @@
 package com.foracademy.services;
 
-import com.foracademy.dao.DaoFactory;
-import com.foracademy.dao.address.AddressDao;
-import com.foracademy.models.Address;
+import com.foracademy.dao.address.IAddressDao;
 
-import java.io.IOException;
+public class AddressService {
+    private IAddressDao addressDao;
 
-public class AddressService { }
+    public AddressService(IAddressDao addressDao) {
+        this.addressDao = addressDao;
+    }
+}

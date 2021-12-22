@@ -24,10 +24,6 @@ public class DaoUtilities {
         return preparedStatement(connection, query, objects).executeUpdate();
     }
 
-    public static void disconnect(Connection connection) throws SQLException {
-        if (!connection.isClosed()) connection.close();
-    }
-
     public static void close( ResultSet resultSet ) {
         if ( resultSet != null ) {
             try {

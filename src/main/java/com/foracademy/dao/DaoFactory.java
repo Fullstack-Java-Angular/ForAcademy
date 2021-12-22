@@ -6,6 +6,7 @@ import com.foracademy.dao.address.IAddressDao;
 import com.foracademy.dao.address.AddressDao;
 import com.foracademy.dao.factory.FactoryDao;
 import com.foracademy.dao.factory.FactoryDaoImplementation;
+import com.foracademy.dao.speciality.SpecialiyDao;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -48,12 +49,8 @@ public class DaoFactory {
         return new AddressDao(this);
     }
 
-    public ClassDao getClassDao() {
-        return new ClassDaoImplementation();
-    }
-
-    public FactoryDao getFactoryDao() {
-        return new FactoryDaoImplementation();
+    public SpecialiyDao getSpeciality() {
+        return new SpecialiyDao(this);
     }
 
 }

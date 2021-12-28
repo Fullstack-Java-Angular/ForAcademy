@@ -6,11 +6,8 @@ public class Permission {
     private String description;
     private boolean active;
 
-    public Permission(int id, String name, String description, boolean active) {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-        this.active = active;
+    public Permission() {
+
     }
 
     public int getId() {
@@ -45,13 +42,5 @@ public class Permission {
         this.active = active;
     }
 
-    @Override
-    public String toString() {
-        return "Permission{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                ", active=" + active +
-                '}';
-    }
+
 }

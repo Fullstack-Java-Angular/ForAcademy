@@ -5,19 +5,12 @@ public class Speciality {
     private String name;
     private String description;
 
-<<<<<<< HEAD
+
     public Speciality(){
 
     }
 
-    public Speciality(int id, String name, String description) {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-    }
-=======
-    public Speciality() { }
->>>>>>> 0f8f383461608f56903ce6a233297d7378ae14e5
+
 
     public long getId() {
         return id;

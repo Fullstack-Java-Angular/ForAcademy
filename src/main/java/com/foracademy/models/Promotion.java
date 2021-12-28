@@ -1,20 +1,17 @@
 package com.foracademy.models;
 
 import java.sql.Time;
+import java.sql.Timestamp;
 
 public class Promotion {
     private int id;
     private String name;
     private int year;
-    private Time startDate;
-    private Time endDate;
+    private Timestamp startDate;
+    private Timestamp endDate;
 
-    public Promotion(int id, String name, int year, Time startDate, Time endDate) {
-        this.id = id;
-        this.name = name;
-        this.year = year;
-        this.startDate = startDate;
-        this.endDate = endDate;
+    public Promotion() {
+
     }
 
     public int getId() {
@@ -41,30 +38,21 @@ public class Promotion {
         this.year = year;
     }
 
-    public Time getStartDate() {
+    public Timestamp getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(Time startDate) {
+    public void setStartDate(Timestamp startDate) {
         this.startDate = startDate;
     }
 
-    public Time getEndDate() {
+    public Timestamp getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(Time endDate) {
+    public void setEndDate(Timestamp endDate) {
         this.endDate = endDate;
     }
 
-    @Override
-    public String toString() {
-        return "Promotion{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", year=" + year +
-                ", startDate=" + startDate +
-                ", endDate=" + endDate +
-                '}';
-    }
+
 }

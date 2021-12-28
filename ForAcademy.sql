@@ -12,7 +12,7 @@ CREATE TABLE Role
     idRole      int AUTO_INCREMENT,
     name        varchar(50) NOT NULL,
     description varchar(255),
-    active      bool,
+    active      boolean,
 
     CONSTRAINT PK_Role PRIMARY KEY (idRole)
 );
@@ -24,7 +24,7 @@ CREATE TABLE Permission
     idPermission int AUTO_INCREMENT,
     name         varchar(50) NOT NULL,
     description  varchar(255),
-    active       bool,
+    active       boolean,
     CONSTRAINT PK_Permission PRIMARY KEY (idPermission)
 );
 
@@ -53,6 +53,21 @@ CREATE TABLE SSICA
     CONSTRAINT PK_Ssica PRIMARY KEY (idSsica)
 );
 
+
+-- Address table
+DROP TABLE IF EXISTS Address;
+CREATE TABLE Address
+(
+    idAddress  int NOT NULL AUTO_INCREMENT,
+    line       varchar(50),
+    country    varchar(50),
+    region     varchar(50),
+    city       varchar(50),
+    postalCode varchar(50),
+
+    CONSTRAINT PK_Address PRIMARY KEY (idAddress)
+);
+
 -- Speciality Table
 DROP TABLE IF EXISTS Speciality;
 CREATE TABLE Speciality
@@ -62,6 +77,28 @@ CREATE TABLE Speciality
     description  varchar(255),
 
     CONSTRAINT PK_Speciality PRIMARY KEY (idSpeciality)
+);
+
+--  User table
+DROP TABLE IF EXISTS User;
+CREATE TABLE User
+(
+    idUser      int          NOT NULL AUTO_INCREMENT,
+    lastName    varchar(255) NOT NULL,
+    firstName   varchar(255),
+    email       varchar(100),
+    password    varchar(255),
+    phone       varchar(100),
+    gander      varchar(50),
+    dateOfBirth date,
+    idAddress   int,
+    active      boolean,
+    idRole      int          NOT NULL,
+
+    CONSTRAINT PK_User PRIMARY KEY (idUser),
+    CONSTRAINT FK_UserRole FOREIGN KEY (idRole) REFERENCES Role (idRole),
+    CONSTRAINT FK_UserAddress FOREIGN KEY (idAddress) REFERENCES Address (idAddress)
+
 );
 
 
@@ -81,19 +118,6 @@ CREATE TABLE Scan
 );
 
 
--- Address table
-DROP TABLE IF EXISTS Address;
-CREATE TABLE Address
-(
-    idAddress  int NOT NULL AUTO_INCREMENT,
-    line       varchar(50),
-    country    varchar(50),
-    region     varchar(50),
-    city       varchar(50),
-    postalCode varchar(50),
-
-    CONSTRAINT PK_Address PRIMARY KEY (idAddress)
-);
 
 -- Factory Table
 DROP TABLE IF EXISTS Factory;
@@ -107,27 +131,6 @@ CREATE TABLE Factory
     CONSTRAINT FK_FactoryAddress FOREIGN KEY (idAddress) REFERENCES Address (idAddress)
 );
 
---  User table
-DROP TABLE IF EXISTS User;
-CREATE TABLE User
-(
-    idUser      int          NOT NULL AUTO_INCREMENT,
-    lastName    varchar(255) NOT NULL,
-    firstName   varchar(255),
-    email       varchar(100),
-    password    varchar(255),
-    phone       varchar(100),
-    gander      varchar(50),
-    dateOfBirth date,
-    idAddress   int,
-    active      bool,
-    idRole      int          NOT NULL,
-
-    CONSTRAINT PK_User PRIMARY KEY (idUser),
-    CONSTRAINT FK_UserRole FOREIGN KEY (idRole) REFERENCES Role (idRole),
-    CONSTRAINT FK_UserAddress FOREIGN KEY (idAddress) REFERENCES Address (idAddress)
-
-);
 
 --  Manager table
 DROP TABLE IF EXISTS Manager;
@@ -160,8 +163,8 @@ CREATE TABLE Class
     name        varchar(50),
     idTrainer   int,
     idPromotion int,
-    startDay    time,
-    endDay      time,
+    startDay    TIMESTAMP,
+    endDay      TIMESTAMP,
 
     CONSTRAINT PK_Class PRIMARY KEY (idClass),
     CONSTRAINT FK_ClassTrainer FOREIGN KEY (idTrainer) REFERENCES Trainer (idTrainer),
@@ -215,6 +218,9 @@ CREATE TABLE Student
     CONSTRAINT FK_StudentSpeciality FOREIGN KEY (idSpeciality) REFERENCES Speciality (idSpeciality),
     CONSTRAINT FK_StudentClass FOREIGN KEY (idClass) REFERENCES Class (idClass)
 );
+
+
+
 
 SET
 foreign_key_checks = 1;

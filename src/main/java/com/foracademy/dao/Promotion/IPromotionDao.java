@@ -4,4 +4,4 @@ import com.foracademy.dao.IDao;
 import com.foracademy.models.Promotion;
 
 
-public interface PromotionDao extends IDao<Promotion> { }
+public interface IPromotionDao extends IDao<Promotion> { }

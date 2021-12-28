@@ -29,7 +29,7 @@ public class SpecialiyDao implements ISpecialityDao {
 
     @Override
     public int delete(int id) throws SQLException {
-        Connection connection = daoFactory.getInstance().getConnection();
+        Connection connection = DaoFactory.getInstance().getConnection();
         Object[] objects = { id };
         return DaoUtilities.cud(connection, DELETE_SPECIALITY, objects);
     }
@@ -37,7 +37,7 @@ public class SpecialiyDao implements ISpecialityDao {
     @Override
     public List<Speciality> findAll() throws SQLException {
         List<Speciality> specialityList = new ArrayList<Speciality>();
-        Connection connection = daoFactory.getInstance().getConnection();
+        Connection connection = DaoFactory.getInstance().getConnection();
         ResultSet resultSet = DaoUtilities.select(connection, SELECT_SPECIALITY);
         while (resultSet.next()) {
             specialityList.add(SpecialityFactory.create(resultSet));

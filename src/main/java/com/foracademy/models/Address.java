@@ -2,18 +2,13 @@ package com.foracademy.models;
 
 public class Address {
     private long id;
+    private String line;
     private String country;
     private String region;
     private String city;
     private String postalCode;
 
-    public Address(long id, String country, String region, String city, String postalCode) {
-        this.id = id;
-        this.country = country;
-        this.region = region;
-        this.city = city;
-        this.postalCode = postalCode;
-    }
+    public Address() {}
 
     public long getId() {
         return id;
@@ -22,6 +17,15 @@ public class Address {
     public void setId(long id) {
         this.id = id;
     }
+
+    public String getLine() {
+        return line;
+    }
+
+    public void setLine(String line) {
+        this.line = line;
+    }
+
 
     public String getCountry() {
         return country;
@@ -55,14 +59,4 @@ public class Address {
         this.postalCode = postalCode;
     }
 
-    @Override
-    public String toString() {
-        return "Address{" +
-                "id=" + id +
-                ", country='" + country + '\'' +
-                ", region='" + region + '\'' +
-                ", city='" + city + '\'' +
-                ", postalCode='" + postalCode + '\'' +
-                '}';
-    }
 }

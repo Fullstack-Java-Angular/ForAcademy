@@ -70,4 +70,6 @@ public class ClassDao implements IClassDao {
         Connection connection = DaoFactory.getInstance().getConnection();
         Object[] objects = {aClass.getName(), aClass.getTrainer(), aClass.getPromotion(), aClass.getStartDay(), aClass.getEndDay(), aClass.getId()};
         return DaoUtilities.cud(connection, UPDATE_CLASS, objects);
-    }}
+    }
+}
+

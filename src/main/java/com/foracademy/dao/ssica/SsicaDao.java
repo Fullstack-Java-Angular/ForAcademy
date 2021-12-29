@@ -69,3 +69,4 @@ public class SsicaDao implements ISsicaDao {
         Object[] objects = {ssica.getBrand(), ssica.getId()};
         return DaoUtilities.cud(connection, UPDATE_SSICA, objects);
     }}
+

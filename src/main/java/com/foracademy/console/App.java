@@ -12,7 +12,7 @@ public class App {
 
     public static void main(String[] args) throws IOException {
         System.out.println("HELLO FROM CONSOLE APP");
-        AddressDao addressDao = DaoFactory.getInstance().getAddressDao();
+        AddressDao addressDao = (AddressDao) DaoFactory.getInstance().getAddressDao();
         try {
             addressDao.delete(23);
         } catch (SQLException e) {

@@ -1,12 +1,14 @@
 package com.foracademy.dao;
 
 import com.foracademy.dao.Class.ClassDao;
-import com.foracademy.dao.Class.ClassDaoImplementation;
+import com.foracademy.dao.Class.IClassDao;
+import com.foracademy.dao.Secretary.ISecretaryDao;
+import com.foracademy.dao.Secretary.SecretaryDao;
 import com.foracademy.dao.address.IAddressDao;
 import com.foracademy.dao.address.AddressDao;
-import com.foracademy.dao.factory.FactoryDao;
-import com.foracademy.dao.factory.FactoryDaoImplementation;
 import com.foracademy.dao.speciality.SpecialiyDao;
+import com.foracademy.dao.ssica.ISsicaDao;
+import com.foracademy.dao.ssica.SsicaDao;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -53,4 +55,10 @@ public class DaoFactory {
         return new SpecialiyDao(this);
     }
 
+    public IClassDao getClassDao() { return new ClassDao(this);}
+
+
+    public ISsicaDao getSsicaDao() {return new SsicaDao(this); }
+
+    public ISecretaryDao getSecretaryDao() {return new SecretaryDao(this);}
 }

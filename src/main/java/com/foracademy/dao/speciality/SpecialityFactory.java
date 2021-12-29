@@ -1,6 +1,5 @@
 package com.foracademy.dao.speciality;
 
-import com.foracademy.models.Address;
 import com.foracademy.models.Speciality;
 
 import java.sql.ResultSet;

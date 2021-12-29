@@ -1,23 +1,17 @@
 package com.foracademy.models;
 
+import java.sql.Date;
 import java.sql.Time;
 
 public class Class {
     private int id;
     private String name;
-    private Trainer trainer;
-    private Promotion promotion;
-    private Time startDay;
-    private Time endDay;
+    private String trainer;
+    private String promotion;
+    private Date startDay;
+    private Date endDay;
 
-    public Class(int id, String name, Trainer trainer, Promotion promotion, Time startDay, Time endDay) {
-        this.id = id;
-        this.name = name;
-        this.trainer = trainer;
-        this.promotion = promotion;
-        this.startDay = startDay;
-        this.endDay = endDay;
-    }
+    public Class() { }
 
     public int getId() {
         return id;
@@ -35,47 +29,36 @@ public class Class {
         this.name = name;
     }
 
-    public Trainer getTrainer() {
+    public String getTrainer() {
         return trainer;
     }
 
-    public void setTrainer(Trainer trainer) {
+    public void setTrainer(String trainer) {
         this.trainer = trainer;
     }
 
-    public Promotion getPromotion() {
+    public String getPromotion() {
         return promotion;
     }
 
-    public void setPromotion(Promotion promotion) {
+    public void setPromotion(String promotion) {
         this.promotion = promotion;
     }
 
-    public Time getStartDay() {
+    public Date getStartDay() {
         return startDay;
     }
 
-    public void setStartDay(Time startDay) {
+    public void setStartDay(Date startDay) {
         this.startDay = startDay;
     }
 
-    public Time getEndDay() {
+    public Date getEndDay() {
         return endDay;
     }
 
-    public void setEndDay(Time endDay) {
+    public void setEndDay(Date endDay) {
         this.endDay = endDay;
     }
 
-    @Override
-    public String toString() {
-        return "Class{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", trainer=" + trainer +
-                ", promotion=" + promotion +
-                ", startDay=" + startDay +
-                ", endDay=" + endDay +
-                '}';
-    }
 }

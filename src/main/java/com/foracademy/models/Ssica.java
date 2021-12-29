@@ -4,10 +4,7 @@ public class Ssica {
     private int id;
     private String brand;
 
-    public Ssica(int id, String brand) {
-        this.id = id;
-        this.brand = brand;
-    }
+    public Ssica() { }
 
     public int getId() {
         return id;
@@ -25,11 +22,4 @@ public class Ssica {
         this.brand = brand;
     }
 
-    @Override
-    public String toString() {
-        return "Ssica{" +
-                "id=" + id +
-                ", brand='" + brand + '\'' +
-                '}';
-    }
 }

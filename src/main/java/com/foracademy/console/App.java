@@ -22,12 +22,13 @@ public class App {
        //PromotionDao promotionDao = DaoFactory.getInstance().getPromotionDao();
         SpecialiyDao specialiyDao = DaoFactory.getInstance().getSpeciality();
 
-        Speciality s = new Speciality();
-        s.setName("math");
-        s.setDescription("aksnknsk cjdn");
+       /* Speciality s = new Speciality();
+        s.setName("phisique");
+        s.setDescription("science part");*/
+
 
         try {
-            specialiyDao.insert(s);
+            System.out.println(specialiyDao.findById(2));
        }catch (SQLException e) {
            e.printStackTrace();
        }

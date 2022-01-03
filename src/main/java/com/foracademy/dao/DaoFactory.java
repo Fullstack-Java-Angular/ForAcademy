@@ -1,12 +1,8 @@
 package com.foracademy.dao;
 
-import com.foracademy.dao.Class.ClassDao;
-import com.foracademy.dao.Class.ClassDaoImplementation;
 import com.foracademy.dao.Promotion.PromotionDao;
 import com.foracademy.dao.address.IAddressDao;
 import com.foracademy.dao.address.AddressDao;
-import com.foracademy.dao.factory.FactoryDao;
-import com.foracademy.dao.factory.FactoryDaoImplementation;
 import com.foracademy.dao.permission.PermissionDao;
 import com.foracademy.dao.role.RoleDao;
 import com.foracademy.dao.speciality.SpecialiyDao;

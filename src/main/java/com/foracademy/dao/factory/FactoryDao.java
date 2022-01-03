@@ -4,7 +4,7 @@ import com.foracademy.models.Factory;
 
 import java.util.List;
 
-public class FactoryDaoImplementation implements FactoryDao {
+public class FactoryDao implements IFactoryDao {
     @Override
     public int delete(int id) {
         return 0;

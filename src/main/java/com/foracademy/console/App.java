@@ -4,7 +4,9 @@ package com.foracademy.console;
 import java.sql.Timestamp;
 import com.foracademy.dao.DaoFactory;
 import com.foracademy.dao.Promotion.PromotionDao;
+import com.foracademy.dao.speciality.SpecialiyDao;
 import com.foracademy.models.Promotion;
+import com.foracademy.models.Speciality;
 import javafx.print.PageOrientation;
 
 import java.sql.SQLException;
@@ -17,18 +19,15 @@ public class App {
 
     public static void main(String[] args) {
 
-       PromotionDao promotionDao = DaoFactory.getInstance().getPromotionDao();
+       //PromotionDao promotionDao = DaoFactory.getInstance().getPromotionDao();
+        SpecialiyDao specialiyDao = DaoFactory.getInstance().getSpeciality();
 
-        Date date = new Date();
-        Timestamp ts =new Timestamp(date.getTime());
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-        Promotion p = new Promotion();
-        p.setName("ksdksd");
-        p.setYear(2012);
-        p.setStartDate(ts);
-        p.setEndDate(ts);
+        Speciality s = new Speciality();
+        s.setName("math");
+        s.setDescription("aksnknsk cjdn");
+
         try {
-           promotionDao.insert(p);
+            specialiyDao.insert(s);
        }catch (SQLException e) {
            e.printStackTrace();
        }

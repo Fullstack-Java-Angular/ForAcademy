@@ -3,12 +3,10 @@ package com.foracademy.models;
 public class Factory {
     private int id;
     private String name;
-    private Address address;
+    private int address;
 
-    public Factory(int id, String name, Address address) {
-        this.id = id;
-        this.name = name;
-        this.address = address;
+    public Factory() {
+
     }
 
     public int getId() {
@@ -27,20 +25,13 @@ public class Factory {
         this.name = name;
     }
 
-    public Address getAddress() {
+    public int getAddress() {
         return address;
     }
 
-    public void setAddress(Address address) {
+    public void setAddress(int address) {
         this.address = address;
     }
 
-    @Override
-    public String toString() {
-        return "Factory{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", address=" + address +
-                '}';
-    }
+
 }

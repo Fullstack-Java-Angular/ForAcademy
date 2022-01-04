@@ -3,68 +3,32 @@ package com.foracademy.models;
 import java.sql.Date;
 
 public class Scan {
-    private Scan scan;
-    private Ssica ssica;
-    private User user;
-    private java.sql.Date arrivalDate;
-    private java.sql.Date goDate;
+    private int id;
+    private int idSsica;
+    private int idUser;
+    private Date arrivalDate;
+    private Date goDate;
 
-    public Scan(Scan scan, Ssica ssica, User user, Date arrivalDate, Date goDate) {
-        this.scan = scan;
-        this.ssica = ssica;
-        this.user = user;
-        this.arrivalDate = arrivalDate;
-        this.goDate = goDate;
-    }
+    public Scan() { }
 
-    public Scan getScan() {
-        return scan;
-    }
 
-    public void setScan(Scan scan) {
-        this.scan = scan;
-    }
+    public int getId() {return id;}
 
-    public Ssica getSsica() {
-        return ssica;
-    }
+    public void setId(int id) {this.id = id;}
 
-    public void setSsica(Ssica ssica) {
-        this.ssica = ssica;
-    }
+    public int getIdSsica() {return idSsica;}
 
-    public User getUser() {
-        return user;
-    }
+    public void setIdSsica(int idSsica) {this.idSsica = idSsica;}
 
-    public void setUser(User user) {
-        this.user = user;
-    }
+    public int getIdUser() {return idUser;}
 
-    public Date getArrivalDate() {
-        return arrivalDate;
-    }
+    public void setIdUser(int idUser) {this.idUser = idUser;}
 
-    public void setArrivalDate(Date arrivalDate) {
-        this.arrivalDate = arrivalDate;
-    }
+    public Date getArrivalDate() {return arrivalDate;}
 
-    public Date getGoDate() {
-        return goDate;
-    }
+    public void setArrivalDate(Date arrivalDate) {this.arrivalDate = arrivalDate;}
 
-    public void setGoDate(Date goDate) {
-        this.goDate = goDate;
-    }
+    public Date getGoDate() {return goDate;}
 
-    @Override
-    public String toString() {
-        return "Scan{" +
-                "scan=" + scan +
-                ", ssica=" + ssica +
-                ", user=" + user +
-                ", arrivalDate=" + arrivalDate +
-                ", goDate=" + goDate +
-                '}';
-    }
+    public void setGoDate(Date goDate) {this.goDate = goDate;}
 }

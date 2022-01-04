@@ -1,6 +1,5 @@
 package com.foracademy.dao.permission;
 
-import com.foracademy.dao.DaoFactory;
 import com.foracademy.dao.DaoUtilities;
 import com.foracademy.models.Permission;
 
@@ -18,8 +17,8 @@ public class PermissionDao implements IPermissionDao {
     private static final String SELECT_Permission = "SELECT * FROM permission";
     private static final String SELECT_ONE_Permission = "SELECT * FROM permission WHERE idPermission = ?";
 
-    private  DaoFactory daoFactory;
-    public PermissionDao(DaoFactory daoFactory) {
+    private DaoUtilities.DaoFactory daoFactory;
+    public PermissionDao(DaoUtilities.DaoFactory daoFactory) {
         this.daoFactory = daoFactory;
     }
 

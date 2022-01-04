@@ -6,8 +6,8 @@ import java.sql.Time;
 public class Class {
     private int id;
     private String name;
-    private String trainer;
-    private String promotion;
+    private int trainer;
+    private int promotion;
     private Date startDay;
     private Date endDay;
 
@@ -29,19 +29,19 @@ public class Class {
         this.name = name;
     }
 
-    public String getTrainer() {
+    public int getTrainer() {
         return trainer;
     }
 
-    public void setTrainer(String trainer) {
+    public void setTrainer(int trainer) {
         this.trainer = trainer;
     }
 
-    public String getPromotion() {
+    public int getPromotion() {
         return promotion;
     }
 
-    public void setPromotion(String promotion) {
+    public void setPromotion(int promotion) {
         this.promotion = promotion;
     }
 

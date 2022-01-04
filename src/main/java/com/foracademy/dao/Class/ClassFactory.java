@@ -13,8 +13,8 @@ public class ClassFactory {
         Class aClass = new Class();
         aClass.setId(resultSet.getInt("idClass"));
         aClass.setName(resultSet.getString("name"));
-        aClass.setTrainer(resultSet.getString("idTrainer"));
-        aClass.setPromotion(resultSet.getString("idPromotion"));
+        aClass.setTrainer(resultSet.getInt("idTrainer"));
+        aClass.setPromotion(resultSet.getInt("idPromotion"));
         aClass.setStartDay(resultSet.getDate("startDay"));
         aClass.setEndDay(resultSet.getDate("endDay"));
         return aClass;

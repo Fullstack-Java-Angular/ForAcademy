@@ -6,11 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="FORFX" />
         <module name="ForAcademy" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="ForAcademy" target="11" />
+      <module name="FORFX" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

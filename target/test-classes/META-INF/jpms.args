@@ -1,0 +1,4 @@
+--patch-module
+com.foracademy.foracademy=_
+--add-reads
+com.foracademy.foracademy=ALL-UNNAMED

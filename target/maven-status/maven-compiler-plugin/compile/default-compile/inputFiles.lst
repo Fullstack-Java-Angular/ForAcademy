@@ -14,7 +14,6 @@ C:\Users\Youcode\Desktop\ForAcademy\src\main\java\com\foracademy\dao\Secretary\S
 C:\Users\Youcode\Desktop\ForAcademy\src\main\java\com\foracademy\dao\rolePermission\RolePermissionDaoImplementation.java
 C:\Users\Youcode\Desktop\ForAcademy\src\main\java\com\foracademy\dao\Class\ClassDao.java
 C:\Users\Youcode\Desktop\ForAcademy\src\main\java\com\foracademy\dao\Class\IClassDao.java
-C:\Users\Youcode\Desktop\ForAcademy\src\main\java\com\foracademy\services\test\SpecialiyDaoTest.java
 C:\Users\Youcode\Desktop\ForAcademy\src\main\java\com\foracademy\dao\permission\PermissionFactory.java
 C:\Users\Youcode\Desktop\ForAcademy\src\main\java\com\foracademy\models\Address.java
 C:\Users\Youcode\Desktop\ForAcademy\src\main\java\com\foracademy\dao\Promotion\IPromotionDao.java
@@ -53,7 +52,6 @@ C:\Users\Youcode\Desktop\ForAcademy\src\main\java\com\foracademy\dao\speciality\
 C:\Users\Youcode\Desktop\ForAcademy\src\main\java\com\foracademy\dao\DaoUtilities.java
 C:\Users\Youcode\Desktop\ForAcademy\src\main\java\com\foracademy\gui\App.java
 C:\Users\Youcode\Desktop\ForAcademy\src\main\java\com\foracademy\gui\MenuController.java
-C:\Users\Youcode\Desktop\ForAcademy\src\main\java\com\foracademy\dao\rolePermission\DaoFactory.java
 C:\Users\Youcode\Desktop\ForAcademy\src\main\java\com\foracademy\models\Permission.java
 C:\Users\Youcode\Desktop\ForAcademy\src\main\java\com\foracademy\models\Speciality.java
 C:\Users\Youcode\Desktop\ForAcademy\src\main\java\com\foracademy\dao\ssica\SsicaDao.java
